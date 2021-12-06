@@ -1,0 +1,103 @@
+﻿<Window x:Class="FP_PEMROGLANJUT.View.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FP_PEMROGLANJUT.View"
+        mc:Ignorable="d"
+        Title="LoginPage" Height="720" Width="1152" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButton" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#14279B"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#14279B"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#414462"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#414462"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#14279B">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="490"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="540"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="412"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Rectangle Stroke="white" Fill="White" Grid.ColumnSpan="3"  Grid.RowSpan="3" Grid.Column="1" Margin="0,0,0,-14"/>
+
+        <Border Grid.Row="1" Grid.Column="2" BorderThickness="1" BorderBrush="black" 
+                CornerRadius="{Binding WindowCornerRadius,FallbackValue=5}" Background="White">
+            <Canvas Background="White" Margin="2,3,3,2" >
+                <Label x:Name="lblJudul" Content="Selamat Datang Di PayMe" FontFamily="Righteous" Foreground="#C6BABA" FontSize="16" FontWeight="Bold" Width="289" Canvas.Left="56" Canvas.Top="70" />
+                <Label x:Name="lblogin" Content="LOGIN" FontFamily="Times New Roman" Foreground="black" FontSize="28" FontWeight="Bold" Width="172"  Grid.Column="2" Grid.Row="1" RenderTransformOrigin="0.708,1.615" FontStretch="Normal" Canvas.Left="56" Canvas.Top="100"/>
+                <Label x:Name="lblakun" Content="Belum Punya Akun?" FontFamily="Arial" Foreground="black" FontSize="9" FontWeight="Bold" Width="98" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="142"/>
+                <Button x:Name="btnBuatAkun" Content="Buat Akun" FontFamily="Arial" Foreground="#C6BABA" FontSize="9" FontWeight="Bold" Canvas.Top="142" Height="20" Width="52" Click="btnBuatAkun_Click" Canvas.Left="154" Background="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="2.186,1.002"/>
+                <Label x:Name="lbluser" Content="Username" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="167"/>
+                <TextBox x:Name="txtUsername" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Grid.Column="2" Grid.Row="1" Canvas.Left="62" Canvas.Top="196" Background="{x:Null}" BorderBrush="{x:Null}" />
+                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="221"/>
+                <Label x:Name="lblEmail" Content="Email" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="231"/>
+                <TextBox x:Name="txtEmaily" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="260" Background="{x:Null}" BorderBrush="{x:Null}" />
+                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="285"/>
+                <Label x:Name="lblPassword" Content="Password" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="295"/>
+                <PasswordBox x:Name="txtPassword" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="324" Background="{x:Null}" BorderBrush="{x:Null}" />
+                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="349"/>
+                <Button Style="{DynamicResource RoundedButton}" x:Name="btnLogin" Content="Log In" Width="240" Height="35" FontFamily="Arial" FontSize="14" Background="#414462" Foreground="White" BorderBrush="#414462" Click="btnLogin_Click" Grid.Column="2" Grid.Row="1" Canvas.Left="83" Canvas.Top="375" FontWeight="Bold"/>
+            </Canvas>
+        </Border>
+        <Image x:Name="imgIconLogin" Source="/Images/LOGO PAYME.png" Height="250" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
+    </Grid>
+</Window>

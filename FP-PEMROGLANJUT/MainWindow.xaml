@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FP_PEMROGLANJUT"
         mc:Ignorable="d"
-        Title="LoginPage" Height="1024" Width="1440">
+        Title="LoginPage1" Height="1024" Width="1440">
+    
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

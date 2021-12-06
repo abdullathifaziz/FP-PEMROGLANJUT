@@ -8,17 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="LOGO PAYME.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="LOGO PAYME.png" />
+    <None Remove="View\LOGO PAYME.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Controller\" />
-    <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\LOGO PAYME.png" />
   </ItemGroup>
 
 </Project>
