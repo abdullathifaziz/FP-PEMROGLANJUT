@@ -20,6 +20,10 @@ namespace FP_PEMROGLANJUT.View
         public LoginPage()
         {
             InitializeComponent();
+
+            // Nggo ngecheck koneksi database, nek error di comment wae
+            Model.DBConnector cek = new Model.DBConnector();
+            cek.dbChecker();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
