@@ -28,7 +28,20 @@ namespace FP_PEMROGLANJUT.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            if(txtUsername.Text == "amikom" && txtEmaily.Text == "amikom1@gmail.com" && txtPassword.Password == "123456")
+            {
+                MainWindow wobj = new MainWindow();
+                wobj.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Maaf Username atau Password salah !");
+                txtUsername.Text = "";
+                txtEmaily.Text = "";
+                txtPassword.Password = "";
+                txtUsername.Focus();
+            }
         }
 
         private void btnBuatAkun_Click(object sender, RoutedEventArgs e)
