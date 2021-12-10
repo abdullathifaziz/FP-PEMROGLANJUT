@@ -107,10 +107,7 @@
         <Label x:Name="lblpass" Content="Password" FontFamily="Montserat" Foreground="#C6BABA" FontSize="18" FontWeight="Bold" Width="140" HorizontalAlignment="Left" Margin="56,433,0,226" Grid.Row="1" Grid.Column="2"/>
         <PasswordBox x:Name="txtPassword" Password="Password" FontFamily="Montserat" FontSize="18" FontStyle="Normal" Height="40" Width="460" HorizontalAlignment="Center" Margin="0,479,0,181" Grid.Column="2" Grid.Row="1" />
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="btnLogin" Content="Log In" Width="370" Height="56" FontFamily="Arial" FontSize="18" Background="Blue" Foreground="White" BorderBrush="Blue" Margin="91,536,111,108" Click="btnLogin_Click" BorderThickness="1,1,1,1" Grid.Column="2" Grid.Row="1"/>
-
-
-
-
+        
         <Image x:Name="imgIconLogin" Source="/Images/LOGO PAYME.png" Height="250" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
     </Grid>
 </Window>
