@@ -30,12 +30,13 @@ namespace FP_PEMROGLANJUT.Model
             try
             {
                 connector.Open();
-                MessageBox.Show("Success");
+                MessageBox.Show("Connected");
             }
             catch(SqlException se)
             {
                 MessageBox.Show("Fail" + se);
             }
+            connector.Close();
         }
 
         // CRUD

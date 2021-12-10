@@ -17,9 +17,14 @@ namespace FP_PEMROGLANJUT.View
     /// </summary>
     public partial class LoginPage : Window
     {
+        // Object
+        Controller.AkunController akunController;
         public LoginPage()
         {
             InitializeComponent();
+
+            // Instance
+            akunController = new Controller.AkunController(this);
 
             // Nggo ngecheck koneksi database, nek error di comment wae
             Model.DBConnector cek = new Model.DBConnector();
@@ -28,20 +33,7 @@ namespace FP_PEMROGLANJUT.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if(txtUsername.Text == "amikom" && txtEmaily.Text == "amikom1@gmail.com" && txtPassword.Password == "123456")
-            {
-                MainWindow wobj = new MainWindow();
-                wobj.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Maaf Username atau Password salah !");
-                txtUsername.Text = "";
-                txtEmaily.Text = "";
-                txtPassword.Password = "";
-                txtUsername.Focus();
-            }
+            akunController.Login();
         }
 
         private void btnBuatAkun_Click(object sender, RoutedEventArgs e)
