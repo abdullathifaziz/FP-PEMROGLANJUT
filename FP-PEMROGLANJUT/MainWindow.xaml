@@ -112,7 +112,5 @@
 
 
         <Image x:Name="imgIconLogin" Source="/Images/LOGO PAYME.png" Height="250" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
-        <x>
-        </x>
     </Grid>
 </Window>
