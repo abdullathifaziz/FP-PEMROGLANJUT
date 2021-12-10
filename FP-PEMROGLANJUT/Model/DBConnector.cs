@@ -10,7 +10,8 @@ namespace FP_PEMROGLANJUT.Model
     class DBConnector
     {
         private static SqlConnection connector;
-        private SqlConnection command;
+        private SqlCommand command;
+        private bool result;
 
         public static SqlConnection GetConnection()
         {
@@ -35,6 +36,109 @@ namespace FP_PEMROGLANJUT.Model
             {
                 MessageBox.Show("Fail" + se);
             }
+        }
+
+        // CRUD
+        // Constructor
+        public DBConnector()
+        {
+            GetConnection();
+        }
+
+        // SELECT DATA
+        public DataSet Select(string tabel, string kondisi)
+        {
+            DataSet ds = new DataSet();
+            
+            try
+            {
+                connector.Open();
+                command = new SqlCommand();
+                command.Connection = connector;
+                command.CommandType = CommandType.Text;
+                if (kondisi == null)
+                {
+                    command.CommandText = "SELECT * FROM " + tabel;
+                }
+                else
+                {
+                    command.CommandText = "SELECT * FROM " + tabel + " WHERE " + kondisi;
+                }
+                SqlDataAdapter sda = new SqlDataAdapter(command);
+                sda.Fill(ds, tabel);
+            }
+            catch(SqlException)
+            {
+                ds = null;
+            }
+            connector.Close();
+            return ds;
+        }
+
+        // INSERT DATA
+        public bool Insert(string tabel, string data)
+        {
+            result = false;
+            try
+            {
+                string query = "INSERT INTO " + tabel + "VALUES (" + data + ")";
+                connector.Open();
+                command = new SqlCommand();
+                command.Connection = connector;
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch(SqlException)
+            {
+                result = false;
+            }
+            connector.Close();
+            return result;
+        }
+
+        // UPDATE DATA
+        public bool Update(string tabel, string data, string kondisi)
+        {
+            result = false;
+            try
+            {
+                string query = "UPDATE " + tabel + " SET " + data + " WHERE " + kondisi;
+                connector.Open();
+                command = new SqlCommand();
+                command.Connection = connector;
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch (SqlException)
+            {
+                result = false;
+            }
+            connector.Close();
+            return result;
+        }
+
+        // DELETE DATA
+        public bool Delete(string tabel, string kondisi)
+        {
+            result = false;
+            try
+            {
+                string query = "DELETE FROM " + tabel + " WHERE " + kondisi;
+                connector.Open();
+                command = new SqlCommand();
+                command.Connection = connector;
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch(SqlException)
+            {
+                result = false;
+            }
+            connector.Close();
+            return result;
         }
     }
 }
