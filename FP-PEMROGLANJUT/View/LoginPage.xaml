@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FP_PEMROGLANJUT.View"
         mc:Ignorable="d"
         Title="LoginPage" Height="720" Width="1152" WindowStartupLocation="CenterScreen">
-    
+
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -82,20 +82,17 @@
         <Border Grid.Row="1" Grid.Column="2" BorderThickness="1" BorderBrush="black" 
                 CornerRadius="{Binding WindowCornerRadius,FallbackValue=5}" Background="White">
             <Canvas Background="White" Margin="2,3,3,2" >
-                <Label x:Name="lblJudul" Content="Selamat Datang Di PayMe" FontFamily="Righteous" Foreground="#C6BABA" FontSize="16" FontWeight="Bold" Width="289" Canvas.Left="56" Canvas.Top="70" />
-                <Label x:Name="lblogin" Content="LOGIN" FontFamily="Times New Roman" Foreground="black" FontSize="28" FontWeight="Bold" Width="172"  Grid.Column="2" Grid.Row="1" RenderTransformOrigin="0.708,1.615" FontStretch="Normal" Canvas.Left="56" Canvas.Top="100"/>
-                <Label x:Name="lblakun" Content="Belum Punya Akun?" FontFamily="Arial" Foreground="black" FontSize="9" FontWeight="Bold" Width="98" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="142"/>
-                <Button x:Name="btnBuatAkun" Content="Buat Akun" FontFamily="Arial" Foreground="#C6BABA" FontSize="9" FontWeight="Bold" Canvas.Top="142" Height="20" Width="52" Click="btnBuatAkun_Click" Canvas.Left="154" Background="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="2.186,1.002"/>
-                <Label x:Name="lbluser" Content="Username" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="167"/>
-                <TextBox x:Name="txtUsername" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Grid.Column="2" Grid.Row="1" Canvas.Left="62" Canvas.Top="196" Background="{x:Null}" BorderBrush="{x:Null}" />
-                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="221"/>
-                <Label x:Name="lblEmail" Content="Email" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="231"/>
-                <TextBox x:Name="txtEmaily" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="260" Background="{x:Null}" BorderBrush="{x:Null}" />
-                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="285"/>
-                <Label x:Name="lblPassword" Content="Password" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="295"/>
-                <PasswordBox x:Name="txtPassword" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="324" Background="{x:Null}" BorderBrush="{x:Null}" />
-                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="349"/>
-                <Button Style="{DynamicResource RoundedButton}" x:Name="btnLogin" Content="Log In" Width="240" Height="35" FontFamily="Arial" FontSize="14" Background="#414462" Foreground="White" BorderBrush="#414462" Click="btnLogin_Click" Grid.Column="2" Grid.Row="1" Canvas.Left="83" Canvas.Top="375" FontWeight="Bold"/>
+                <Label x:Name="lblJudul" Content="Selamat Datang Di PayMe" FontFamily="Righteous" Foreground="#C6BABA" FontSize="16" FontWeight="Bold" Width="289" Canvas.Left="56" Canvas.Top="100" />
+                <Label x:Name="lblogin" Content="LOGIN" FontFamily="Times New Roman" Foreground="black" FontSize="28" FontWeight="Bold" Width="172"  Grid.Column="2" Grid.Row="1" RenderTransformOrigin="0.708,1.615" FontStretch="Normal" Canvas.Left="56" Canvas.Top="130"/>
+                <Label x:Name="lblakun" Content="Belum Punya Akun?" FontFamily="Arial" Foreground="black" FontSize="9" FontWeight="Bold" Width="98" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="172"/>
+                <Button x:Name="btnBuatAkun" Content="Buat Akun" FontFamily="Arial" Foreground="#C6BABA" FontSize="9" FontWeight="Bold" Canvas.Top="172" Height="20" Width="52" Click="btnBuatAkun_Click" Canvas.Left="154" Background="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="2.186,1.002"/>
+                <Label x:Name="lbluser" Content="Username" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="197"/>
+                <TextBox x:Name="txtUsername" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Grid.Column="2" Grid.Row="1" Canvas.Left="62" Canvas.Top="226" Background="{x:Null}" BorderBrush="{x:Null}" />
+                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="251"/>
+                <Label x:Name="lblPassword" Content="Password" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="271"/>
+                <PasswordBox x:Name="txtPassword" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="300" Background="{x:Null}" BorderBrush="{x:Null}" />
+                <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="325"/>
+                <Button Style="{DynamicResource RoundedButton}" x:Name="btnLogin" Content="Log In" Width="240" Height="35" FontFamily="Arial" FontSize="14" Background="#414462" Foreground="White" BorderBrush="#414462" Click="btnLogin_Click" Grid.Column="2" Grid.Row="1" Canvas.Left="82" Canvas.Top="352" FontWeight="Bold"/>
             </Canvas>
         </Border>
         <Image x:Name="imgIconLogin" Source="/Images/LOGO PAYME.png" Height="250" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
