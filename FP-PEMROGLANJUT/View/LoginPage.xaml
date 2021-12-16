@@ -65,6 +65,7 @@
         </Style>
     </Window.Resources>
 
+    <StackPanel Height="720" Width="1152">
     <Grid Background="#14279B">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -97,4 +98,5 @@
         </Border>
         <Image x:Name="imgIconLogin" Source="/Images/LOGO PAYME.png" Height="250" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
     </Grid>
+    </StackPanel>
 </Window>
