@@ -2,8 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FP_PEMROGLANJUT"
-             StartupUri="View/LoginPage.xaml">
+             StartupUri="View/HomeWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="MenuDockPanel" TargetType="DockPanel">
+            <Setter Property="Background" Value="#14279B" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#BA7CD7" />
+                    <Setter Property="Cursor" Value="Hand" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="#14279B" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>
