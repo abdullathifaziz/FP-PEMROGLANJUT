@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\beranda.png" />
+    <None Remove="Images\exit.png" />
+    <None Remove="Images\hiburan.png" />
+    <None Remove="Images\isiulang.png" />
+    <None Remove="Images\logo kecil.png" />
+    <None Remove="Images\pengaturan.png" />
+    <None Remove="Images\profil.png" />
+    <None Remove="Images\tagihan.png" />
     <None Remove="View\LOGO PAYME.png" />
   </ItemGroup>
 
@@ -16,13 +24,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\beranda.png" />
+    <Resource Include="Images\exit.png" />
+    <Resource Include="Images\hiburan.png" />
+    <Resource Include="Images\isiulang.png" />
+    <Resource Include="Images\logo kecil.png" />
     <Resource Include="Images\LOGO PAYME.png" />
-  </ItemGroup>
+    <Resource Include="Images\pengaturan.png" />
+    <Resource Include="Images\profil.png" />
+    <Resource Include="Images\tagihan.png" />
 
-  <ItemGroup>
-    <None Update="Images\logo kecil.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

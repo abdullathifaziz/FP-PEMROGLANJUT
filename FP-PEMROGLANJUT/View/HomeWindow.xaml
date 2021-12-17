@@ -8,7 +8,7 @@
         Title="HomeWindow" Height="720" Width="1152" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160"></ColumnDefinition>
+            <ColumnDefinition Width="110"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
@@ -24,7 +24,7 @@
                 <RowDefinition Height="90"/>
             </Grid.RowDefinitions>
 
-            <Image Grid.Row="0" Source="/Images/logo kecil.png"/>
+            <Image Grid.Row="0" Width="90" Height="90" Source="/Images/logo kecil.png"/>
 
             <DockPanel Grid.Row="2" x:Name="menuBeranda" Height="90" MouseDown="menuBeranda_MouseDown" Style="{DynamicResource MenuDockPanel}">
                 <Image Width="60" Height="60"
@@ -51,7 +51,7 @@
             </DockPanel>
 
             <DockPanel Grid.Row="7" x:Name="menuPengaturan" Height="90" MouseDown="menuPengaturan_MouseDown" Style="{DynamicResource MenuDockPanel}">
-                <Image Width="90" Height="90"
+                <Image Width="80" Height="80" Margin="0,0,0,10"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 Source="/Images/pengaturan.png"/>
             </DockPanel>

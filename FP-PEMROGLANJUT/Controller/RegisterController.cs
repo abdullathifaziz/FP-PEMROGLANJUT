@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using System.Windows;
 
 namespace FP_PEMROGLANJUT.Controller
 {
@@ -22,7 +23,8 @@ namespace FP_PEMROGLANJUT.Controller
             register.namablkg = buat.txtNamaBelakang.Text;
             register.email = buat.txtEmail.Text;
             register.telp = buat.txtNomorTelephon.Text;
-            
+
+            /*
             bool result = buat.InsertRegister();
             if (result)
             {
@@ -37,7 +39,8 @@ namespace FP_PEMROGLANJUT.Controller
                 MessageBox.Show("Maaf, registrasi akun gagal, " +
                     "periksa dan lengkapi data anda");
             }
+            */
         }
-            
+    
     }
 }

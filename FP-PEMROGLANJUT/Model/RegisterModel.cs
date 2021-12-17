@@ -20,21 +20,26 @@ namespace FP_PEMROGLANJUT.Model
             temp = new DBConnector();
         }
 
-        public bool CekRegister()
+        // tak nonaktifke sikek ben ra eror
+        /*
+    public bool CekRegister()
+    {
+
+        bool result = false;
+        DataSet ds = new DataSet();
+        ds = temp.Select("nama depan", "nama belakang", "mail = '" + namablkg + email + "' AND telp = '" + telp + "'");
+        if (ds.Tables[0].Rows.Count > 0)
         {
-            bool result = false;
-            DataSet ds = new DataSet();
-            ds = temp.Select("nama depan", "nama belakang", "mail = '" + namablkg + email + "' AND telp = '" + telp + "'");
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                result = true;
-            }
-            else
-            {
-                result = false;
-            }
-            return result;
+            result = true;
         }
+        else
+        {
+            result = false;
+        }
+        return result;
+
+    }
+        */
 
         public bool InsertRegister()
         {
