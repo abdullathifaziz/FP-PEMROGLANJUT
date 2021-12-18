@@ -17,16 +17,16 @@ namespace FP_PEMROGLANJUT.View
     /// </summary>
     public partial class BuatAkunPage : Window
     {
+        Controller.AkunController akun;
         public BuatAkunPage()
         {
             InitializeComponent();
+            akun = new Controller.AkunController(this);
         }
 
-        private void btnLanjut_Click(object sender, RoutedEventArgs e)
+        private void btnDaftar_Click(object sender, RoutedEventArgs e)
         {
-            BuatPasswordPage buatPassword = new BuatPasswordPage();
-            buatPassword.Show();
-            this.Close();
+            akun.Register();
         }
     }
 }

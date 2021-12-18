@@ -84,18 +84,18 @@
                 <Canvas Background="White" Margin="2,3,3,2" >
                     <Label x:Name="lblBuatAkun" Content="Buat Akun" FontFamily="Times New Roman" Foreground="black" FontSize="28" FontWeight="Bold" Width="172"  Grid.Column="2" Grid.Row="1" RenderTransformOrigin="0.708,1.615" FontStretch="Normal" Canvas.Left="56" Canvas.Top="95"/>
                     <Label x:Name="lblNamaDepan" Content="Nama Depan" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="86" RenderTransformOrigin="1.35,-0.91" Grid.Row="1" Grid.Column="2" Canvas.Left="56" Canvas.Top="155"/>
-                    <TextBox x:Name="txtNamaDepan" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="122" FontWeight="Normal" Grid.Column="2" Grid.Row="1" Canvas.Left="62" Canvas.Top="184" Background="{x:Null}" BorderBrush="{x:Null}" TextAlignment="Center" />
+                    <TextBox x:Name="txtNamaDepan" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="122" FontWeight="Normal" Grid.Column="2" Grid.Row="1" Canvas.Left="62" Canvas.Top="184" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     <Rectangle Height="1" Stroke="Black" Opacity="10" Width="122" Canvas.Left="62" Canvas.Top="209"/>
                     <Label x:Name="lblNamaBelakang" Content="Nama Belakang" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="101" RenderTransformOrigin="1.35,-0.91" Canvas.Left="217" Canvas.Top="155"/>
-                    <TextBox x:Name="txtNamaBelakang" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="122" FontWeight="Normal" Canvas.Left="223" Canvas.Top="184" Background="{x:Null}" BorderBrush="{x:Null}" TextAlignment="Center" />
+                    <TextBox x:Name="txtNamaBelakang" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="122" FontWeight="Normal" Canvas.Left="223" Canvas.Top="184" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     <Rectangle Height="1" Stroke="Black" Opacity="10" Width="122" Canvas.Left="223" Canvas.Top="209"/>
-                    <Label x:Name="lblEmail" Content="Email" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="219"/>
-                    <TextBox x:Name="txtEmail" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="248" Background="{x:Null}" BorderBrush="{x:Null}" TextAlignment="Center" />
+                    <Label x:Name="lblUsername" Content="Username" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="219"/>
+                    <TextBox x:Name="txtUsername" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="248" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="273"/>
-                    <Label x:Name="lblNomorTelephon" Content="Nomor Telephon" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="110" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="283"/>
-                    <TextBox x:Name="txtNomorTelephon" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="312" Background="{x:Null}" BorderBrush="{x:Null}" TextAlignment="Center" />
+                    <Label x:Name="lblPassword" Content="Password" FontFamily="Arial" Foreground="#C6BABA" FontSize="12" FontWeight="Bold" Width="70" RenderTransformOrigin="1.35,-0.91" Canvas.Left="56" Canvas.Top="283"/>
+                    <TextBox x:Name="txtPassword" FontFamily="Arial" FontSize="12" FontStyle="Normal" Height="25" Width="283" FontWeight="Normal" Canvas.Left="62" Canvas.Top="312" Background="{x:Null}" BorderBrush="{x:Null}"/>
                     <Rectangle Height="1" Stroke="Black" Opacity="10" Width="283" Canvas.Left="62" Canvas.Top="337"/>
-                    <Button Style="{DynamicResource RoundedButton}" x:Name="btnLanjut" Content="Lanjut" Width="70" Height="25" FontFamily="Arial" FontSize="10" Background="#414462" Foreground="White" BorderBrush="#414462" Click="btnLanjut_Click" Grid.Column="2" Grid.Row="1" Canvas.Left="275" Canvas.Top="362" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource RoundedButton}" x:Name="btnDaftar" Content="Daftar" Width="70" Height="25" FontFamily="Arial" FontSize="10" Background="#414462" Foreground="White" BorderBrush="#414462" Click="btnDaftar_Click" Grid.Column="2" Grid.Row="1" Canvas.Left="275" Canvas.Top="362" FontWeight="Bold"/>
                 </Canvas>
             </Border>
             <Image x:Name="imgIconLogin" Source="/Images/LOGO PAYME.png" Height="250" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />

@@ -20,13 +20,12 @@ namespace FP_PEMROGLANJUT.View
         public BuatPasswordPage()
         {
             InitializeComponent();
+            
         }
 
         private void btnDaftar_Click(object sender, RoutedEventArgs e)
         {
-            LoginPage loginP = new LoginPage();
-            loginP.Show();
-            this.Close();
+            
         }
     }
 }
