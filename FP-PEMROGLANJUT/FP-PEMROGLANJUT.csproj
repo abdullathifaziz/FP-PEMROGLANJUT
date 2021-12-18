@@ -11,6 +11,7 @@
     <None Remove="Images\beranda.png" />
     <None Remove="Images\exit.png" />
     <None Remove="Images\hiburan.png" />
+    <None Remove="Images\isiulang 1.png" />
     <None Remove="Images\isiulang.png" />
     <None Remove="Images\logo kecil.png" />
     <None Remove="Images\pengaturan.png" />
@@ -27,6 +28,7 @@
     <Resource Include="Images\beranda.png" />
     <Resource Include="Images\exit.png" />
     <Resource Include="Images\hiburan.png" />
+    <Resource Include="Images\isiulang 1.png" />
     <Resource Include="Images\isiulang.png" />
     <Resource Include="Images\logo kecil.png" />
     <Resource Include="Images\LOGO PAYME.png" />

@@ -22,5 +22,15 @@ namespace FP_PEMROGLANJUT.View
         {
             InitializeComponent();
         }
+
+        private void menuIsiUlangUtama_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void menuTagihanUtama_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
