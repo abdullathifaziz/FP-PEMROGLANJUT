@@ -48,26 +48,33 @@ namespace FP_PEMROGLANJUT.Controller
 
         public void Register()
         {
-            akun.nama_depan = register.txtNamaDepan.Text;
-            akun.nama_belakang = register.txtNamaBelakang.Text;
-            akun.usrname = register.txtUsername.Text;
-            akun.passwd = register.txtPassword.Text;
-
-            bool result = akun.InsertAkun();
-
-            if(result)
+            if (register.checkboxSDK.IsChecked ?? false)
             {
-                MessageBox.Show("Pembuatan Akun Berhasil");
-                View.LoginPage login = new View.LoginPage();
-                login.Show();
-                register.Close();
+                akun.nama_depan = register.txtNamaDepan.Text;
+                akun.nama_belakang = register.txtNamaBelakang.Text;
+                akun.usrname = register.txtUsername.Text;
+                akun.passwd = register.txtPassword.Password;
+
+                bool result = akun.InsertAkun();
+
+                if (result)
+                {
+                    MessageBox.Show("Pembuatan Akun Berhasil");
+                    View.LoginPage login = new View.LoginPage();
+                    login.Show();
+                    register.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Pembuatan Akun Gagal");
+                    View.BuatAkunPage register = new View.BuatAkunPage();
+                    register.Show();
+                    register.Close();
+                }
             }
             else
             {
-                MessageBox.Show("Pembuatan Akun Gagal");
-                View.BuatAkunPage register = new View.BuatAkunPage();
-                register.Show();
-                register.Close();
+                MessageBox.Show("Mohon checklist Syarat dan Ketentuan");
             }
         }
     }
