@@ -9,9 +9,10 @@ namespace FP_PEMROGLANJUT.Model
     {
         DBConnector temp;
 
-        public string username { get; set; }
+        public string usrname { get; set; }
         public string passwd { get; set; }
-        public string email { get; set; }
+        public string nama_depan { get; set; }
+        public string nama_belakang { get; set; }
 
         public AkunModel()
         {
@@ -22,7 +23,7 @@ namespace FP_PEMROGLANJUT.Model
         {
             bool result = false;
             DataSet ds = new DataSet();
-            ds = temp.Select("akun", "usrname = '" + username + "' AND passwd = '" + passwd + "'");
+            ds = temp.Select("akun", "usrname = '" + usrname + "' AND passwd = '" + passwd + "'");
             if(ds.Tables[0].Rows.Count > 0)
             {
                 result = true;
@@ -32,6 +33,12 @@ namespace FP_PEMROGLANJUT.Model
                 result = false;
             }
             return result;
+        }
+
+        public bool InsertAkun()
+        {
+            string data = "'" + usrname + "','" + passwd + "','" + nama_depan + "','" + nama_belakang + "',null,null";
+            return temp.Insert("akun", data);
         }
         
     }

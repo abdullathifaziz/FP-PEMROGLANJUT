@@ -82,7 +82,7 @@ namespace FP_PEMROGLANJUT.Model
             result = false;
             try
             {
-                string query = "INSERT INTO " + tabel + "VALUES (" + data + ")";
+                string query = "INSERT INTO " + tabel + " VALUES (" + data + ");";
                 connector.Open();
                 command = new SqlCommand();
                 command.Connection = connector;

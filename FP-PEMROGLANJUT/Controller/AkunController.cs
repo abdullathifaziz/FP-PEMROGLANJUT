@@ -10,6 +10,7 @@ namespace FP_PEMROGLANJUT.Controller
         // Object
         Model.AkunModel akun;
         View.LoginPage login;
+        View.BuatAkunPage register;
 
         // Instance
         public AkunController(View.LoginPage login)
@@ -18,20 +19,23 @@ namespace FP_PEMROGLANJUT.Controller
             this.login = login;
         }
 
+        public AkunController(View.BuatAkunPage register)
+        {
+            akun = new Model.AkunModel();
+            this.register = register;
+        }
+
         public void Login()
         {
-            akun.username = login.txtUsername.Text;
+            akun.usrname = login.txtUsername.Text;
             akun.passwd = login.txtPassword.Password;
             bool result = akun.CekLogin();
 
             if (result)
             {
-                // Ganti Main Menu nek wis dadi
-                MessageBox.Show("ID Password Benar");
-
-                // View.MainMenu main = new View.MainMenu();
-                // main.Show();
-                // login.Close();
+                View.HomeWindow homeWindow = new View.HomeWindow();
+                homeWindow.Show();
+                login.Close();
             }
             else
             {
@@ -39,6 +43,38 @@ namespace FP_PEMROGLANJUT.Controller
                 login.txtUsername.Text = "";
                 login.txtPassword.Password = "";
                 login.txtUsername.Focus();
+            }
+        }
+
+        public void Register()
+        {
+            if (register.checkboxSDK.IsChecked ?? false)
+            {
+                akun.nama_depan = register.txtNamaDepan.Text;
+                akun.nama_belakang = register.txtNamaBelakang.Text;
+                akun.usrname = register.txtUsername.Text;
+                akun.passwd = register.txtPassword.Password;
+
+                bool result = akun.InsertAkun();
+
+                if (result)
+                {
+                    MessageBox.Show("Pembuatan Akun Berhasil");
+                    View.LoginPage login = new View.LoginPage();
+                    login.Show();
+                    register.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Pembuatan Akun Gagal");
+                    View.BuatAkunPage register = new View.BuatAkunPage();
+                    register.Show();
+                    register.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mohon checklist Syarat dan Ketentuan");
             }
         }
     }
