@@ -9,7 +9,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="110"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="437*"></ColumnDefinition>
+            <ColumnDefinition Width="84*"/>
         </Grid.ColumnDefinitions>
 
         <Grid Background="#14279B">
@@ -57,7 +58,7 @@
             </DockPanel>
         </Grid>
 
-        <Grid Grid.Column="1" Background="#3D56B2">
+        <Grid Grid.Column="1" Background="#3D56B2" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="110" />
                 <RowDefinition Height="15"/>
